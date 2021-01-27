@@ -72,6 +72,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="bVb-P4-ezV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="GZ7-Jt-dyE"/>
                     <constraint firstAttribute="trailing" secondItem="bVb-P4-ezV" secondAttribute="trailing" constant="20" id="TEw-S7-a5G"/>
