@@ -10,8 +10,9 @@ import Foundation
 struct PictureResponse: Decodable {
     
     let medium: String
+    let large: String
     
     func transform() -> Picture {
-        return Picture(medium: medium)
+        return Picture(medium: medium, large: large)
     }
 }

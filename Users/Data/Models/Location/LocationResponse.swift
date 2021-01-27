@@ -13,8 +13,9 @@ struct LocationResponse: Decodable {
     let city: String
     let state: String
     let street: StreetResponse
+    let coordinates: CoordinatesResponse
     
     func transform() -> Location {
-        return Location(country: country, city: city, state: state, street: street.transform())
+        return Location(country: country, city: city, state: state, street: street.transform(), coordinates: coordinates.transform())
     }
 }

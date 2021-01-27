@@ -13,4 +13,16 @@ struct User {
     let name: Name
     let location: Location
     let picture: Picture
+    
+    func getName() -> String {
+        return "\(name.first) \(name.last)"
+    }
+    
+    func getInfo() -> String {
+        return """
+        \(gender.capitalized), \(phone)
+        \(location.country)
+        \(location.street.number) \(location.street.name) \(location.state) \(location.city)
+        """
+    }
 }

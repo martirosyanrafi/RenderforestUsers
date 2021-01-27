@@ -12,4 +12,5 @@ struct Location {
     let city: String
     let state: String
     let street: Street
+    let coordinates: Coordinates
 }
