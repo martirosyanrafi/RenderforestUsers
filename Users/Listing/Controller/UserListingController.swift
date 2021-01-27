@@ -19,11 +19,19 @@ class UserListingController: UIViewController {
         
         title = "Users"
         tableView.selectionCommand = UserSelectionCommand(controller: self)
-        tableView.setDataProvider(apiDataProvider)
+        tableView.dataProvider = apiDataProvider
+        tableView.loadMoreData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadCurrentData()
     }
     
     @IBAction func segmentedControlAction(_ sender: UISegmentedControl) {
-        tableView.setDataProvider(sender.selectedSegmentIndex == 0 ? apiDataProvider : localDataProvider)
+        tableView.dataProvider = sender.selectedSegmentIndex == 0 ? apiDataProvider : localDataProvider
+        tableView.reloadCurrentData()
     }
 }
 

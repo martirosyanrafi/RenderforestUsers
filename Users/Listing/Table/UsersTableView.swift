@@ -10,7 +10,8 @@ import UIKit
 class UsersTableView: BaseTableView {
     
     var selectionCommand: UserSelectionCommand?
-    private var dataProvider: BaseUserDataProvider!
+    var dataProvider: BaseUserDataProvider!
+    private var lastContentOffset: CGFloat = 0
     
     override func commonInit() {
         super.commonInit()
@@ -19,9 +20,7 @@ class UsersTableView: BaseTableView {
         setIndicatorView()
     }
     
-    func setDataProvider(_ dataProvider: BaseUserDataProvider) {
-        self.dataProvider = dataProvider
-        
+    func reloadCurrentData() {
         builders = [[]]
         addNewUsers(dataProvider.getCurrentData())
         reloadData()
@@ -35,6 +34,10 @@ class UsersTableView: BaseTableView {
     
     private func removeIndicatorView() {
         backgroundView = nil
+    }
+    
+    func loadMoreData() {
+        dataProvider.loadMoreData(completion: { [weak self] in self?.addNewUsers($0) })
     }
     
     func addNewUsers(_ users: [User]) {
@@ -55,5 +58,12 @@ class UsersTableView: BaseTableView {
         
         command.user = (builders[indexPath.section][indexPath.row] as! CellBuilder<User, UserCell>).getData()
         command.execute()
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y + scrollView.frame.size.height >= scrollView.contentSize.height * 3 / 4 && lastContentOffset < scrollView.contentOffset.y {
+            loadMoreData()
+        }
+        self.lastContentOffset = scrollView.contentOffset.y
     }
 }
