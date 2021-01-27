@@ -48,7 +48,9 @@ class UsersTableView: BaseTableView, UISearchBarDelegate {
     }
     
     func addNewUsers(_ users: [User]) {
-        removeIndicatorView()
+        if !users.isEmpty && dataProvider.hasMoreData() {
+            removeIndicatorView()
+        }
         
         let newBuilders = users.map({ CellBuilder<User, UserCell>($0) })
         builders[0].append(contentsOf: newBuilders)
