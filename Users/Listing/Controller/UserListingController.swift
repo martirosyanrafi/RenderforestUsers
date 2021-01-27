@@ -10,6 +10,7 @@ import UIKit
 class UserListingController: UIViewController {
     
     @IBOutlet weak var tableView: UsersTableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     private let localDataProvider = UserLocalDataProvider()
     private let apiDataProvider = UserApiDataProvider()
@@ -21,6 +22,7 @@ class UserListingController: UIViewController {
         tableView.selectionCommand = UserSelectionCommand(controller: self)
         tableView.dataProvider = apiDataProvider
         tableView.loadMoreData()
+        searchBar.delegate = tableView
     }
     
     override func viewWillAppear(_ animated: Bool) {

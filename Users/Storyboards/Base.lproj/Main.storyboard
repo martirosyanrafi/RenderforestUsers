@@ -80,6 +80,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="EgW-qO-9oI"/>
                     <connections>
+                        <outlet property="searchBar" destination="PtS-2B-dfq" id="Tr0-EK-aCK"/>
                         <outlet property="tableView" destination="UlN-OW-CbB" id="oWT-Yq-48g"/>
                     </connections>
                 </viewController>
