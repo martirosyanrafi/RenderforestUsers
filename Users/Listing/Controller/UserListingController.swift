@@ -32,6 +32,7 @@ class UserListingController: UIViewController {
     }
     
     @IBAction func segmentedControlAction(_ sender: UISegmentedControl) {
+        tableView.dataProvider.stopLoadingData()
         tableView.dataProvider = sender.selectedSegmentIndex == 0 ? apiDataProvider : localDataProvider
         tableView.reloadCurrentData()
     }

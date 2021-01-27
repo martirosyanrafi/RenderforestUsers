@@ -48,7 +48,7 @@ class UsersTableView: BaseTableView, UISearchBarDelegate {
     }
     
     func addNewUsers(_ users: [User]) {
-        if !users.isEmpty && dataProvider.hasMoreData() {
+        if !users.isEmpty || !dataProvider.hasMoreData() {
             removeIndicatorView()
         }
         

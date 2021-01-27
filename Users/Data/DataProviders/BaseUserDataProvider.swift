@@ -11,9 +11,12 @@ protocol BaseUserDataProvider {
     func hasMoreData() -> Bool
     func getCurrentData() -> [User]
     func loadMoreData(completion: @escaping ([User]) -> Void)
+    func stopLoadingData()
 }
 
 extension BaseUserDataProvider {
+    
+    func stopLoadingData() { }
     
     func getCurrentData(search: String) -> [User] {
         getCurrentData().filter({ $0.email.contains(search) || $0.gender.contains(search) || $0.phone.contains(search) || $0.getName().contains(search) || $0.getInfo().contains(search) })
