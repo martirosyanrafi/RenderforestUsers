@@ -16,7 +16,9 @@
 		C453129525C2153B00570CD5 /* StreetRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453129425C2153B00570CD5 /* StreetRealm.swift */; };
 		C453129825C2157500570CD5 /* CoordinatesRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453129725C2157500570CD5 /* CoordinatesRealm.swift */; };
 		C453129B25C215E800570CD5 /* PictureRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453129A25C215E800570CD5 /* PictureRealm.swift */; };
-		C453129F25C2197300570CD5 /* UserDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453129E25C2197300570CD5 /* UserDataProvider.swift */; };
+		C453129F25C2197300570CD5 /* UserLocalDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453129E25C2197300570CD5 /* UserLocalDataProvider.swift */; };
+		C45312A825C2212C00570CD5 /* BaseUserDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45312A725C2212C00570CD5 /* BaseUserDataProvider.swift */; };
+		C45312AC25C2235B00570CD5 /* UserApiDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45312AB25C2235B00570CD5 /* UserApiDataProvider.swift */; };
 		C4F8000125C206E700396365 /* UserSelectionCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F8000025C206E700396365 /* UserSelectionCommand.swift */; };
 		C4F8FF5325C1E7E200396365 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F8FF5225C1E7E200396365 /* AppDelegate.swift */; };
 		C4F8FF5525C1E7E200396365 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F8FF5425C1E7E200396365 /* SceneDelegate.swift */; };
@@ -31,7 +33,6 @@
 		C4F8FF8125C1EC2C00396365 /* BaseCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F8FF7B25C1EC2C00396365 /* BaseCellBuilder.swift */; };
 		C4F8FF8225C1EC2C00396365 /* BaseListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F8FF7C25C1EC2C00396365 /* BaseListing.swift */; };
 		C4F8FF8725C1ECD300396365 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F8FF8625C1ECD300396365 /* User.swift */; };
-		C4F8FF9425C1EECD00396365 /* GetUsersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F8FF9325C1EECD00396365 /* GetUsersRequest.swift */; };
 		C4F8FF9C25C1EF9400396365 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F8FF9B25C1EF9400396365 /* DataExtension.swift */; };
 		C4F8FFA125C1EFC800396365 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F8FFA025C1EFC800396365 /* ApiResponse.swift */; };
 		C4F8FFB325C1F12700396365 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F8FFB125C1F12700396365 /* UserCell.swift */; };
@@ -66,7 +67,9 @@
 		C453129425C2153B00570CD5 /* StreetRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetRealm.swift; sourceTree = "<group>"; };
 		C453129725C2157500570CD5 /* CoordinatesRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesRealm.swift; sourceTree = "<group>"; };
 		C453129A25C215E800570CD5 /* PictureRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureRealm.swift; sourceTree = "<group>"; };
-		C453129E25C2197300570CD5 /* UserDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataProvider.swift; sourceTree = "<group>"; };
+		C453129E25C2197300570CD5 /* UserLocalDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocalDataProvider.swift; sourceTree = "<group>"; };
+		C45312A725C2212C00570CD5 /* BaseUserDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUserDataProvider.swift; sourceTree = "<group>"; };
+		C45312AB25C2235B00570CD5 /* UserApiDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiDataProvider.swift; sourceTree = "<group>"; };
 		C4F8000025C206E700396365 /* UserSelectionCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSelectionCommand.swift; sourceTree = "<group>"; };
 		C4F8FF4F25C1E7E200396365 /* Users.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Users.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4F8FF5225C1E7E200396365 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +86,6 @@
 		C4F8FF7B25C1EC2C00396365 /* BaseCellBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCellBuilder.swift; sourceTree = "<group>"; };
 		C4F8FF7C25C1EC2C00396365 /* BaseListing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseListing.swift; sourceTree = "<group>"; };
 		C4F8FF8625C1ECD300396365 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		C4F8FF9325C1EECD00396365 /* GetUsersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsersRequest.swift; sourceTree = "<group>"; };
 		C4F8FF9B25C1EF9400396365 /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
 		C4F8FFA025C1EFC800396365 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		C4F8FFB125C1F12700396365 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -148,7 +150,9 @@
 		C453129D25C2196600570CD5 /* DataProviders */ = {
 			isa = PBXGroup;
 			children = (
-				C453129E25C2197300570CD5 /* UserDataProvider.swift */,
+				C45312AB25C2235B00570CD5 /* UserApiDataProvider.swift */,
+				C453129E25C2197300570CD5 /* UserLocalDataProvider.swift */,
+				C45312A725C2212C00570CD5 /* BaseUserDataProvider.swift */,
 			);
 			path = DataProviders;
 			sourceTree = "<group>";
@@ -295,18 +299,9 @@
 			isa = PBXGroup;
 			children = (
 				C453129D25C2196600570CD5 /* DataProviders */,
-				C4F8FF9225C1EEC200396365 /* Requests */,
 				C4F8FF8525C1ECC200396365 /* Models */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		C4F8FF9225C1EEC200396365 /* Requests */ = {
-			isa = PBXGroup;
-			children = (
-				C4F8FF9325C1EECD00396365 /* GetUsersRequest.swift */,
-			);
-			path = Requests;
 			sourceTree = "<group>";
 		};
 		C4F8FF9A25C1EF7A00396365 /* Extensions */ = {
@@ -555,13 +550,14 @@
 				C4F8FF7E25C1EC2C00396365 /* CellBuilder.swift in Sources */,
 				C4F8FF8025C1EC2C00396365 /* BaseTableView.swift in Sources */,
 				C453129825C2157500570CD5 /* CoordinatesRealm.swift in Sources */,
+				C45312AC25C2235B00570CD5 /* UserApiDataProvider.swift in Sources */,
 				C4F8FF8125C1EC2C00396365 /* BaseCellBuilder.swift in Sources */,
 				C453128225C211EA00570CD5 /* Coordinates.swift in Sources */,
 				C4F8000125C206E700396365 /* UserSelectionCommand.swift in Sources */,
 				C453129225C214F400570CD5 /* LocationRealm.swift in Sources */,
 				C453127E25C211E200570CD5 /* CoordinatesResponse.swift in Sources */,
 				C4F8FFD625C1FD1000396365 /* Street.swift in Sources */,
-				C453129F25C2197300570CD5 /* UserDataProvider.swift in Sources */,
+				C453129F25C2197300570CD5 /* UserLocalDataProvider.swift in Sources */,
 				C453128F25C214BB00570CD5 /* NameRealm.swift in Sources */,
 				C4F8FFC325C1FA9900396365 /* LocationResponse.swift in Sources */,
 				C4F8FFF225C2034900396365 /* SingleUserController.swift in Sources */,
@@ -570,10 +566,10 @@
 				C4F8FFE225C1FEF300396365 /* PictureResponse.swift in Sources */,
 				C4F8FFC725C1FAB100396365 /* Name.swift in Sources */,
 				C4F8FFC025C1F8A200396365 /* NameResponse.swift in Sources */,
+				C45312A825C2212C00570CD5 /* BaseUserDataProvider.swift in Sources */,
 				C4F8FFF925C2068A00396365 /* GlobalExtension.swift in Sources */,
 				C4F8FFE525C1FEFA00396365 /* Picture.swift in Sources */,
 				C4F8FF7D25C1EC2C00396365 /* BaseCell.swift in Sources */,
-				C4F8FF9425C1EECD00396365 /* GetUsersRequest.swift in Sources */,
 				C4F8FFDA25C1FD1800396365 /* StreetResponse.swift in Sources */,
 				C4F8FFA125C1EFC800396365 /* ApiResponse.swift in Sources */,
 				C4F8FF5725C1E7E200396365 /* UserListingController.swift in Sources */,

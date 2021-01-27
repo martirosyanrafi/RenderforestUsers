@@ -10,12 +10,21 @@ import UIKit
 class UsersTableView: BaseTableView {
     
     var selectionCommand: UserSelectionCommand?
+    private var dataProvider: BaseUserDataProvider!
     
     override func commonInit() {
         super.commonInit()
         
         builders.append([])
         setIndicatorView()
+    }
+    
+    func setDataProvider(_ dataProvider: BaseUserDataProvider) {
+        self.dataProvider = dataProvider
+        
+        builders = [[]]
+        addNewUsers(dataProvider.getCurrentData())
+        reloadData()
     }
     
     private func setIndicatorView() {

@@ -39,7 +39,7 @@ class SingleUserController: UIViewController {
     }
     
     private func configureSaveButtons() {
-        UserDataProvider().getSavedUsers().contains(where: { $0.email == user.email }) ? removeState() : saveState()
+        UserLocalDataProvider().getSavedUsers().contains(where: { $0.email == user.email }) ? removeState() : saveState()
     }
     
     private func saveState() {
@@ -63,12 +63,12 @@ class SingleUserController: UIViewController {
     }
     
     @IBAction func saveUserAction(_ sender: Any) {
-        UserDataProvider().saveUser(user)
+        UserLocalDataProvider().saveUser(user)
         removeState()
     }
     
     @IBAction func removeUserAction(_ sender: Any) {
-        UserDataProvider().removeUser(user)
+        UserLocalDataProvider().removeUser(user)
         saveState()
     }
 }

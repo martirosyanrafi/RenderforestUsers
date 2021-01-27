@@ -8,15 +8,22 @@
 import UIKit
 
 class UserListingController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UsersTableView!
+    
+    private let localDataProvider = UserLocalDataProvider()
+    private let apiDataProvider = UserApiDataProvider()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Users"
         tableView.selectionCommand = UserSelectionCommand(controller: self)
-        GetUsersRequest(tableView: tableView).load()
+        tableView.setDataProvider(apiDataProvider)
+    }
+    
+    @IBAction func segmentedControlAction(_ sender: UISegmentedControl) {
+        tableView.setDataProvider(sender.selectedSegmentIndex == 0 ? apiDataProvider : localDataProvider)
     }
 }
 

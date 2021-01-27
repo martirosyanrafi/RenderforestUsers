@@ -7,7 +7,7 @@
 
 import RealmSwift
 
-struct UserDataProvider {
+struct UserLocalDataProvider: BaseUserDataProvider {
     
     func getSavedUsers() -> [User] {
         return try! Realm().objects(UserRealm.self).map({ $0.transform() })
@@ -23,5 +23,17 @@ struct UserDataProvider {
         if let user = realm.objects(UserRealm.self).first(where: { user.email == $0.getEmail() }) {
             try! realm.write({ realm.delete(user) })
         }
+    }
+    
+    func hasMoreData() -> Bool {
+        return false
+    }
+    
+    func getCurrentData() -> [User] {
+        return getSavedUsers()
+    }
+    
+    func loadMoreData(completion: ([User]) -> Void) {
+        completion([])
     }
 }
