@@ -8,5 +8,6 @@ target 'Users' do
   # Pods for Users
   pod 'Alamofire'
   pod 'Kingfisher'
+  pod 'RealmSwift'
   
 end

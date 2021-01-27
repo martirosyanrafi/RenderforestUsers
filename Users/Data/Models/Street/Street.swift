@@ -8,6 +8,11 @@
 import Foundation
 
 struct Street {
+    
     let number: Int
     let name: String
+    
+    func localTransform() -> StreetRealm {
+        return StreetRealm(number: number, name: name)
+    }
 }

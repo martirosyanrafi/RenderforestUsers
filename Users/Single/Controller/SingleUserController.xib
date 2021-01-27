@@ -14,6 +14,7 @@
                 <outlet property="infoLabel" destination="84J-qh-5cc" id="274-oK-BEW"/>
                 <outlet property="mapView" destination="Nz7-ii-q96" id="zco-UD-V3F"/>
                 <outlet property="nameLabel" destination="iaT-mG-Okc" id="V7Y-n7-4O2"/>
+                <outlet property="removeButton" destination="1Xl-HO-0nN" id="Ul6-LT-t06"/>
                 <outlet property="saveUserButton" destination="o2e-8L-Vvb" id="6QL-Yn-GzV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

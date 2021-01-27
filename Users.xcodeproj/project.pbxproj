@@ -10,6 +10,13 @@
 		9388D4B8EBCFA5D938F4F754 /* Pods_Users.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDBB34F7646F85F63A143276 /* Pods_Users.framework */; };
 		C453127E25C211E200570CD5 /* CoordinatesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453127D25C211E200570CD5 /* CoordinatesResponse.swift */; };
 		C453128225C211EA00570CD5 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453128125C211EA00570CD5 /* Coordinates.swift */; };
+		C453128C25C2140200570CD5 /* UserRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453128B25C2140200570CD5 /* UserRealm.swift */; };
+		C453128F25C214BB00570CD5 /* NameRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453128E25C214BB00570CD5 /* NameRealm.swift */; };
+		C453129225C214F400570CD5 /* LocationRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453129125C214F400570CD5 /* LocationRealm.swift */; };
+		C453129525C2153B00570CD5 /* StreetRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453129425C2153B00570CD5 /* StreetRealm.swift */; };
+		C453129825C2157500570CD5 /* CoordinatesRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453129725C2157500570CD5 /* CoordinatesRealm.swift */; };
+		C453129B25C215E800570CD5 /* PictureRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453129A25C215E800570CD5 /* PictureRealm.swift */; };
+		C453129F25C2197300570CD5 /* UserDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453129E25C2197300570CD5 /* UserDataProvider.swift */; };
 		C4F8000125C206E700396365 /* UserSelectionCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F8000025C206E700396365 /* UserSelectionCommand.swift */; };
 		C4F8FF5325C1E7E200396365 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F8FF5225C1E7E200396365 /* AppDelegate.swift */; };
 		C4F8FF5525C1E7E200396365 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F8FF5425C1E7E200396365 /* SceneDelegate.swift */; };
@@ -53,6 +60,13 @@
 		BDBB34F7646F85F63A143276 /* Pods_Users.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Users.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C453127D25C211E200570CD5 /* CoordinatesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesResponse.swift; sourceTree = "<group>"; };
 		C453128125C211EA00570CD5 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
+		C453128B25C2140200570CD5 /* UserRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealm.swift; sourceTree = "<group>"; };
+		C453128E25C214BB00570CD5 /* NameRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameRealm.swift; sourceTree = "<group>"; };
+		C453129125C214F400570CD5 /* LocationRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRealm.swift; sourceTree = "<group>"; };
+		C453129425C2153B00570CD5 /* StreetRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetRealm.swift; sourceTree = "<group>"; };
+		C453129725C2157500570CD5 /* CoordinatesRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesRealm.swift; sourceTree = "<group>"; };
+		C453129A25C215E800570CD5 /* PictureRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureRealm.swift; sourceTree = "<group>"; };
+		C453129E25C2197300570CD5 /* UserDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataProvider.swift; sourceTree = "<group>"; };
 		C4F8000025C206E700396365 /* UserSelectionCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSelectionCommand.swift; sourceTree = "<group>"; };
 		C4F8FF4F25C1E7E200396365 /* Users.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Users.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4F8FF5225C1E7E200396365 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,8 +140,17 @@
 			children = (
 				C453128125C211EA00570CD5 /* Coordinates.swift */,
 				C453127D25C211E200570CD5 /* CoordinatesResponse.swift */,
+				C453129725C2157500570CD5 /* CoordinatesRealm.swift */,
 			);
 			path = Coordinates;
+			sourceTree = "<group>";
+		};
+		C453129D25C2196600570CD5 /* DataProviders */ = {
+			isa = PBXGroup;
+			children = (
+				C453129E25C2197300570CD5 /* UserDataProvider.swift */,
+			);
+			path = DataProviders;
 			sourceTree = "<group>";
 		};
 		C4F8FF4625C1E7E200396365 = {
@@ -263,6 +286,7 @@
 			children = (
 				C4F8FF8625C1ECD300396365 /* User.swift */,
 				C4F8FFBC25C1F81E00396365 /* UserResponse.swift */,
+				C453128B25C2140200570CD5 /* UserRealm.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -270,6 +294,7 @@
 		C4F8FF9125C1EE9200396365 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				C453129D25C2196600570CD5 /* DataProviders */,
 				C4F8FF9225C1EEC200396365 /* Requests */,
 				C4F8FF8525C1ECC200396365 /* Models */,
 			);
@@ -326,6 +351,7 @@
 			children = (
 				C4F8FFC625C1FAB100396365 /* Name.swift */,
 				C4F8FFBF25C1F8A200396365 /* NameResponse.swift */,
+				C453128E25C214BB00570CD5 /* NameRealm.swift */,
 			);
 			path = Name;
 			sourceTree = "<group>";
@@ -335,6 +361,7 @@
 			children = (
 				C4F8FFCE25C1FB1400396365 /* Location.swift */,
 				C4F8FFC225C1FA9900396365 /* LocationResponse.swift */,
+				C453129125C214F400570CD5 /* LocationRealm.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -344,6 +371,7 @@
 			children = (
 				C4F8FFD525C1FD1000396365 /* Street.swift */,
 				C4F8FFD925C1FD1800396365 /* StreetResponse.swift */,
+				C453129425C2153B00570CD5 /* StreetRealm.swift */,
 			);
 			path = Street;
 			sourceTree = "<group>";
@@ -353,6 +381,7 @@
 			children = (
 				C4F8FFE425C1FEFA00396365 /* Picture.swift */,
 				C4F8FFE125C1FEF300396365 /* PictureResponse.swift */,
+				C453129A25C215E800570CD5 /* PictureRealm.swift */,
 			);
 			path = Picture;
 			sourceTree = "<group>";
@@ -516,17 +545,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C453129B25C215E800570CD5 /* PictureRealm.swift in Sources */,
+				C453129525C2153B00570CD5 /* StreetRealm.swift in Sources */,
+				C453128C25C2140200570CD5 /* UserRealm.swift in Sources */,
 				C4F8FFE925C1FF8F00396365 /* UIImageViewExtension.swift in Sources */,
 				C4F8FF8225C1EC2C00396365 /* BaseListing.swift in Sources */,
 				C4F8FF9C25C1EF9400396365 /* DataExtension.swift in Sources */,
 				C4F8FFCF25C1FB1400396365 /* Location.swift in Sources */,
 				C4F8FF7E25C1EC2C00396365 /* CellBuilder.swift in Sources */,
 				C4F8FF8025C1EC2C00396365 /* BaseTableView.swift in Sources */,
+				C453129825C2157500570CD5 /* CoordinatesRealm.swift in Sources */,
 				C4F8FF8125C1EC2C00396365 /* BaseCellBuilder.swift in Sources */,
 				C453128225C211EA00570CD5 /* Coordinates.swift in Sources */,
 				C4F8000125C206E700396365 /* UserSelectionCommand.swift in Sources */,
+				C453129225C214F400570CD5 /* LocationRealm.swift in Sources */,
 				C453127E25C211E200570CD5 /* CoordinatesResponse.swift in Sources */,
 				C4F8FFD625C1FD1000396365 /* Street.swift in Sources */,
+				C453129F25C2197300570CD5 /* UserDataProvider.swift in Sources */,
+				C453128F25C214BB00570CD5 /* NameRealm.swift in Sources */,
 				C4F8FFC325C1FA9900396365 /* LocationResponse.swift in Sources */,
 				C4F8FFF225C2034900396365 /* SingleUserController.swift in Sources */,
 				C4F8FFB925C1F14500396365 /* UsersTableView.swift in Sources */,

@@ -8,6 +8,11 @@
 import Foundation
 
 struct Picture {
+    
     let medium: String
     let large: String
+    
+    func localTransform() -> PictureRealm {
+        return PictureRealm(medium: medium, large: large)
+    }
 }
